@@ -6,6 +6,9 @@ Published in `2021 International Conference on Cyberworlds (CW)`
 ## Introduction
 A Deep learning model will be used to generate expressive music with dynamics. Expressive music requires information such as pitch, time, and velocity, which can be extracted from the MIDI files and encoded in a piano roll format. The piano roll will be used as the symbolic data representation and global step will be used as the temporal scope representation. To generate expressive music with the input of a piano roll, the chosen architecture needs to be able to learn from real samples of expressive music. Hence, a deep convolutional generative adversarial network (DCGAN) is used to fulfil this requirement. It has the ability to learn the data distribution for a given dataset, allowing it to generate expressive music with music dynamics
 
+## Dataset
+*Cymatics Oracle Hip Hop Sample Pack* from https://cymatics.fm/
+
 ## Data Pre-Processing
 Firstly, a function was written to retrieve all MIDI training data and convert it into a Muspy music object. Next, with the Muspy library, the velocity of all notes was clipped from range 40 to 127 and transposed from its original key into a C major or A minor key. The clipped music object then used Muspy’s built-in function to convert to a piano roll data representation. Also, to improve training time, the piano roll was further constrained with two octaves up and down the starting pitch. Lastly, OpenCV was used to resize the piano-roll into a Nx48x48x1 dimension where N denotes the number of training tracks.
 
