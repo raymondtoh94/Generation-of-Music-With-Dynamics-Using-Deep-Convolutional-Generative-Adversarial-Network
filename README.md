@@ -1,4 +1,7 @@
-# Music-Generation-With-DCGAN
+# Generation of Music With Dynamics Using Deep Convolutional Generative Adversarial Network
+Source code for https://ieeexplore.ieee.org/abstract/document/9599356
+
+Published in `2021 International Conference on Cyberworlds (CW)`
 
 ## Introduction
 A Deep learning model will be used to generate expressive music with dynamics. Expressive music requires information such as pitch, time, and velocity, which can be extracted from the MIDI files and encoded in a piano roll format. The piano roll will be used as the symbolic data representation and global step will be used as the temporal scope representation. To generate expressive music with the input of a piano roll, the chosen architecture needs to be able to learn from real samples of expressive music. Hence, a deep convolutional generative adversarial network (DCGAN) is used to fulfil this requirement. It has the ability to learn the data distribution for a given dataset, allowing it to generate expressive music with music dynamics
